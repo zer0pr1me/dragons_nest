@@ -1,2 +1,15 @@
-*.exe
-.vscode
+# Dart / Flutter
+.dart_tool/
+.packages
+build/
+pubspec_overrides.yaml
+coverage/
+*.iml
+.idea/
+.vscode/
+
+# Test ROMs and user ROMs are never committed (see docs/TESTING.md)
+test-roms/
+*.nes
+*.fds
+*.sav

@@ -1,0 +1,14 @@
+name: dn_nes
+description: NES / Famicom system emulation for Dragon's Nest (pure Dart).
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  dn_core: any
+  dn_mos6502: any
+
+dev_dependencies:
+  test: ^1.25.0

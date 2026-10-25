@@ -1,0 +1,13 @@
+name: dn_mos6502
+description: MOS 6502 / Ricoh 2A03 CPU core for Dragon's Nest (pure Dart).
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  dn_core: any
+
+dev_dependencies:
+  test: ^1.25.0

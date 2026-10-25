@@ -1,0 +1,15 @@
+name: dragons_nest_workspace
+publish_to: none
+
+environment:
+  sdk: ^3.6.0
+
+# Pure-Dart packages live here. The Flutter app (`app/`) joins the workspace
+# once it is created in Phase 4 (see docs/ROADMAP.md).
+workspace:
+  - packages/dn_core
+  - packages/dn_mos6502
+  - packages/dn_nes
+
+dev_dependencies:
+  lints: ^5.0.0
