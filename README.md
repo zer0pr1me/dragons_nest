@@ -7,8 +7,8 @@ A cross-platform retro game emulator, starting with the **NES / Famicom**.
 - **App** — Flutter frontend for Windows, macOS, Linux, Android and iOS (web is
   a stretch goal).
 
-> Status: **Phase 0 — bootstrap.** The previous Go 6502 prototype was retired;
-> it is still in git history at commit `49c63f3`. See the
+> Status: **Phase 0 — bootstrap.** The previous Go 6502 prototype is kept for
+> reference in [`v1/`](v1/) and is not developed further. See the
 > [roadmap](docs/ROADMAP.md) for what comes next.
 
 ## Repository layout
@@ -20,6 +20,7 @@ packages/
   dn_nes/       NES machine: cartridge, mappers, PPU, APU, input
 app/            Flutter frontend (currently a test-pattern screen)
 docs/           architecture, roadmap, testing strategy, decision records
+v1/             the earlier Go 6502 prototype (reference only)
 ```
 
 ## Development

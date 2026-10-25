@@ -7,7 +7,7 @@ lands, so this file always shows where the project stands.
 
 ## Phase 0: Bootstrap ✅
 
-- [x] Retire the Go prototype (kept in history at `49c63f3`)
+- [x] Retire the Go prototype (kept for reference in `v1/`)
 - [x] Dart pub workspace with `dn_core`, `dn_mos6502`, `dn_nes`
 - [x] Lints, formatting and CI (format, analyze, test, web build)
 - [x] Minimal Flutter app (`app/`) for all five platforms plus web: draws an
