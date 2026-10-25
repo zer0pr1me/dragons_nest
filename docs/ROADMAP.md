@@ -18,7 +18,7 @@ lands, so this file always shows where the project stands.
 
 Goal: a cycle-accurate NMOS 6502 that passes the standard CPU test suites.
 
-- [ ] Registers, status flags, `Bus`-driven fetch/execute loop
+- [x] Registers, status flags, `Bus`-driven fetch/execute loop
 - [ ] All 151 official opcodes with every addressing mode
 - [ ] Correct cycle counts, including page-cross and branch penalties
 - [ ] Dummy reads and writes (they matter for NES I/O registers)
