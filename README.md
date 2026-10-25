@@ -18,19 +18,21 @@ packages/
   dn_core/      system-agnostic contracts (Bus, EmulatedSystem, ...)
   dn_mos6502/   MOS 6502 / Ricoh 2A03 CPU
   dn_nes/       NES machine: cartridge, mappers, PPU, APU, input
-app/            Flutter frontend (created in Phase 4)
+app/            Flutter frontend (currently a test-pattern screen)
 docs/           architecture, roadmap, testing strategy, decision records
 ```
 
 ## Development
 
-Requires Dart SDK ≥ 3.6 (Flutter SDK once `app/` exists).
+Requires the Flutter SDK (stable, with Dart ≥ 3.6). The app is a workspace
+member, so resolving the workspace needs Flutter even for the pure-Dart packages.
 
 ```sh
-dart pub get                 # resolves the whole workspace
-dart analyze
+flutter pub get                       # resolves the whole workspace
+flutter analyze
 dart format .
-(cd packages/dn_mos6502 && dart test)
+(cd packages/dn_mos6502 && dart test) # a pure-Dart package
+(cd app && flutter run -d linux)      # or macos, windows, chrome, a device
 ```
 
 ## Documentation

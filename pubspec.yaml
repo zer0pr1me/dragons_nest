@@ -4,12 +4,13 @@ publish_to: none
 environment:
   sdk: ^3.6.0
 
-# Pure-Dart packages live here. The Flutter app (`app/`) joins the workspace
-# once it is created in Phase 4 (see docs/ROADMAP.md).
+# Pure-Dart emulation packages plus the Flutter app. Resolving the workspace
+# needs the Flutter SDK because `app/` is a member.
 workspace:
+  - app
   - packages/dn_core
   - packages/dn_mos6502
   - packages/dn_nes
 
 dev_dependencies:
-  lints: ^5.0.0
+  lints: ^6.0.0

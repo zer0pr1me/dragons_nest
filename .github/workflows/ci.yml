@@ -5,18 +5,26 @@ on:
   pull_request:
 
 jobs:
-  dart-packages:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: dart-lang/setup-dart@v1
+      - uses: subosito/flutter-action@v2
         with:
-          sdk: stable
-      - run: dart pub get
+          channel: stable
+          cache: true
+      # The app is a workspace member, so resolving needs the Flutter SDK.
+      - run: flutter pub get
       - run: dart format --output=none --set-exit-if-changed .
-      - run: dart analyze --fatal-infos
-      - name: Test packages
+      - run: flutter analyze --fatal-infos
+      - name: Test pure-Dart packages
         run: |
           for pkg in packages/*/; do
             (cd "$pkg" && dart test)
           done
+      - name: Test app
+        working-directory: app
+        run: flutter test
+      - name: Build web
+        working-directory: app
+        run: flutter build web --release --no-web-resources-cdn

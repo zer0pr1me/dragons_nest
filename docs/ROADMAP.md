@@ -1,14 +1,17 @@
 # Roadmap
 
 Each phase ends with a **definition of done** we can check. Phases 1–3 are pure
-Dart and need only the Dart SDK; Flutter enters in Phase 4. Tick boxes as work
+Dart packages; the Flutter app exists from Phase 0 as a shell and grows into
+the real frontend in Phase 4. Tick boxes as work
 lands, so this file always shows where the project stands.
 
 ## Phase 0: Bootstrap ✅
 
 - [x] Retire the Go prototype (kept in history at `49c63f3`)
 - [x] Dart pub workspace with `dn_core`, `dn_mos6502`, `dn_nes`
-- [x] Lints, formatting and CI (format, analyze, test)
+- [x] Lints, formatting and CI (format, analyze, test, web build)
+- [x] Minimal Flutter app (`app/`) for all five platforms plus web: draws an
+      animated 256×240 test pattern through the RGBA → `ui.Image` path
 - [x] Architecture, roadmap, testing docs and initial ADRs
 
 ## Phase 1: 6502 CPU (`dn_mos6502`)
@@ -61,7 +64,6 @@ state taken mid-game restores to an identical framebuffer and audio stream.
 
 ## Phase 4: Flutter app, desktop first (`app/`)
 
-- [ ] `flutter create` the app and add it to the workspace
 - [ ] Emulation isolate and message protocol (see ARCHITECTURE.md, "Threading")
 - [ ] Video: `ui.Image` per frame, integer or aspect-correct scaling, nearest-neighbour filtering
 - [ ] Audio: streaming PCM output, with audio-driven frame pacing (spike first, see ADR-0004)

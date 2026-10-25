@@ -10,8 +10,9 @@ Status: Accepted (2026-10-25)
   (CPU, reusable by future 6502 systems), `dn_nes` (the machine).
 - The repo is a Dart **pub workspace** (Dart ≥ 3.6): one `pub get` and one
   lockfile, with cross-package references resolved locally.
-- The Flutter app (`app/`) joins the workspace in Phase 4. Until then the repo
-  builds with just the Dart SDK.
+- The Flutter app (`app/`) is also a workspace member, so resolving the
+  workspace needs the Flutter SDK. The packages themselves still run and test
+  with plain `dart test`.
 
 ## Consequences
 
